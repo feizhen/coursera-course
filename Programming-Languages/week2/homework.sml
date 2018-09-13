@@ -43,7 +43,9 @@ fun number_in_month (list: (int*int*int) list, month: int) =
         else 0 + number_in_month(tl list,month)
 
 
-(* 3. *)
+(* 3. Write a function number_in_months that takes a list of dates and a list of months (i.e., an int list)
+ * and returns the number of dates in the list of dates that are in any of the months in the list of months.
+ * Assume the list of months has no number repeated *)
 fun number_in_months (list: (int*int*int) list, months: int list) =
     if null list
     then 0
@@ -83,7 +85,11 @@ fun get_nth (list: string list, n: int) =
     then hd list
     else get_nth(tl list,n-1)
 
-(* 7. *)
+(* 7. Writeafunctiondate_to_stringthattakesadateandreturnsastringoftheformJanuary 20, 2013 (for example).
+ * Use the operator ^ for concatenating strings and the library function Int.toString for converting an int to a string.
+ * For producing the month part, do not use a bunch of conditionals. Instead, use a list holding 12 strings and your answer to the previous problem.
+ * For consistency, put a comma following the day and use capitalized English month names:
+ * January, February, March, April, May, June, July, August, September, October, November, December *)
 fun date_to_string(year: int, month: int, day: int) =
     let
         val year_str = ["January", "February", "March", "April", "May", "June",
@@ -143,3 +149,7 @@ fun oldest (dates: (int*int*int) list) =
         in
             SOME (max_nonempty dates)
         end
+
+(* 12. to do *)
+
+(* 13. to do *)
