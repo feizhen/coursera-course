@@ -8,6 +8,7 @@ def get_optimal_value(capacity, weights, values):
     return value
 
 
+
 if __name__ == "__main__":
     data = list(map(int, sys.stdin.read().split()))
     n, capacity = data[0:2]
