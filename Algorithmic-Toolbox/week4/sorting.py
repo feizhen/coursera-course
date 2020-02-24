@@ -5,7 +5,7 @@ import random
 
 def partition3(a, l, r):
     seed = random.randint(l, r)
-    x = arr[seed]
+    x = a[seed]
     j = l
     for i in range(l + 1, r + 1):
         if a[i] <= x:
